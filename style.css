@@ -8,19 +8,27 @@ h3 {
 .mdl-card.mdl-shadow--2dp {
   width: 100%; }
 
-.mdl-card .mdl-card__supporting-text {
-  margin-top: 20px; }
-  .mdl-card .mdl-card__supporting-text p {
-    font-size: 17px; }
-
-.mdl-card .fa-tint {
-  color: #03a9f4;
-  font-size: 40px; }
-
-.mdl-card .value {
-  font-size: 60px;
-  font-weight: 700; }
+.mdl-card {
+  min-height: 140px; }
+  .mdl-card .mdl-card__supporting-text {
+    margin-top: 10px; }
+    .mdl-card .mdl-card__supporting-text p {
+      font-size: 17px; }
+  .mdl-card .fa-tint,
+  .mdl-card .fa-sun-o {
+    font-size: 35px; }
+  .mdl-card .fa-tint {
+    color: #03a9f4; }
+  .mdl-card .fa-sun-o {
+    color: #ff9800; }
+  .mdl-card .value {
+    font-size: 50px;
+    font-weight: 700; }
 
 .humidity .mdl-card__title {
   background-color: #03a9f4;
+  color: white; }
+
+.temperature .mdl-card__title {
+  background-color: #ff9800;
   color: white; }

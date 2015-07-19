@@ -1,5 +1,6 @@
 $aqua: rgb(3, 169, 244);
-$bigSize: 60px;
+$orange: rgb(255, 152, 0);
+$bigSize: 50px;
 
 body{
 	background-color: #eee;
@@ -12,15 +13,22 @@ h3{
 	width: 100%;
 }
 .mdl-card{
+	min-height: 140px;
 	.mdl-card__supporting-text{
-		margin-top: 20px;
+		margin-top: 10px;
 		p{
 			font-size: 17px;
 		}
 	}
+	.fa-tint,
+	.fa-sun-o{
+		font-size: $bigSize - 15;
+	}
 	.fa-tint{
 		color: $aqua;
-		font-size: $bigSize - 20;
+	}
+	.fa-sun-o{
+		color: $orange;
 	}
 	.value{
 		font-size: $bigSize;
@@ -30,6 +38,12 @@ h3{
 .humidity {
 	.mdl-card__title{
 		background-color: $aqua;
+		color: white;
+	}
+}
+.temperature{
+	.mdl-card__title{
+		background-color: $orange;
 		color: white;
 	}
 }
