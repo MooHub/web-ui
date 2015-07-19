@@ -1,0 +1,27 @@
+{
+  "name": "esp8266",
+  "version": "1.0.0",
+  "description": "Custom UI for the ESP8266 module.",
+  "main": " ",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-minify-html": "^1.0.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-minify-html": "^1.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://moebiusmania@github.com/moebiusmania/ESP8266.git"
+  },
+  "author": "Salvatore Laisa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moebiusmania/ESP8266/issues"
+  },
+  "homepage": "https://github.com/moebiusmania/ESP8266#readme"
+}
