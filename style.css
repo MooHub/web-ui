@@ -14,13 +14,10 @@ h3 {
     margin-top: 10px; }
     .mdl-card .mdl-card__supporting-text p {
       font-size: 17px; }
-  .mdl-card .fa-tint,
-  .mdl-card .fa-sun-o {
-    font-size: 35px; }
-  .mdl-card .fa-tint {
-    color: #03a9f4; }
-  .mdl-card .fa-sun-o {
-    color: #ff9800; }
+  .mdl-card .mdl-card__title .fa {
+    margin-right: 5px; }
+  .mdl-card .mdl-card__title .fa-tint {
+    margin-top: 3px; }
   .mdl-card .value {
     font-size: 50px;
     font-weight: 700; }
