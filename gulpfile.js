@@ -1,8 +1,9 @@
 var gulp = require('gulp');
 var minifyHTML = require('gulp-minify-html');
 var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
 
-gulp.task('default', ['minify-html','sass']);
+gulp.task('default', ['minify-html','sass','minify-js']);
 
 gulp.task('minify-html', function() {
   return gulp.src('./src/index.html')
@@ -16,4 +17,10 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(''));
 });
 
-gulp.watch(['./src/index.html','./src/style.scss'],['default']);
+gulp.task('minify-js', function() {
+  return gulp.src('src/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest(''));
+});
+
+gulp.watch(['./src/index.html','./src/style.scss','./src/app.js'],['default']);
