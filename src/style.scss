@@ -44,4 +44,13 @@ h3{
 		background-color: $orange;
 		color: white;
 	}
+	.mdl-switch.is-checked .mdl-switch__track{
+		background-color: lighten($orange, 35%);
+	}
+	.mdl-switch.is-checked .mdl-switch__thumb{
+		background-color: $orange;
+	}
+	.mdl-switch__ripple-container .mdl-ripple{
+		background-color: lighten($orange, 5%);
+	}
 }
