@@ -1,22 +1,49 @@
-var temperature = true;
-var c,f;
+var devStatus;
 
-window.onload = function(){
-	c = document.querySelector('#tempCels');
-	f = document.querySelector('#tempFahr');
-	var toggle = document.querySelector('#switch-1');
-	f.style.display = "none";
-	toggle.addEventListener('click',showDegreesUnit);
+$(document).on('ready',function(){
+	$('#tempFahr').hide();
+	$('#switch-1').on('click',showDegreesUnit);
+	$('#switch-2').on('click',setDevStatus);
+
+	manageDevStatus();
+});
+
+function manageDevStatus(){
+	devStatus = $('#switch-2').attr('data-status');
+	if(devStatus == 0){
+		$('#devOff').show();
+		$('#devOn').hide();
+		$('#switch-2').attr('checked',false);
+	}else{
+		$('#devOff').hide();
+		$('#devOn').show();
+		$('#switch-2').attr('checked',true);
+	}
 }
 
 function showDegreesUnit(){
-	temperature = !temperature;
-	if(temperature){
-		f.style.display = "none";
-		c.style.display = "block";
+	$('#tempCels').toggle();
+	$('#tempFahr').toggle();
+}
+
+function setDevStatus(){
+	var string;
+	if(devStatus == 0){
+		string = 'ON';
 	}else{
-		f.style.display = "block";
-		c.style.display = "none";
+		string = 'OFF';
 	}
-	console.log(temperature);
+	$.ajax({
+		url: window.location.href + '?pin=' + string + '1' ,
+		success: function(r,s){
+			if(devStatus == 0){
+				devStatus == 1;
+				$('#switch-2').attr('data-status',1);
+			}else{
+				devStatus == 0;
+				$('#switch-2').attr('data-status',0);
+			}
+			manageDevStatus();
+		}
+	})
 }
