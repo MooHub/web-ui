@@ -1,5 +1,6 @@
 $aqua: rgb(3, 169, 244);
 $orange: rgb(255, 152, 0);
+$grey: rgb(96, 125, 139);
 $bigSize: 50px;
 
 body{
@@ -52,5 +53,20 @@ h3{
 	}
 	.mdl-switch__ripple-container .mdl-ripple{
 		background-color: lighten($orange, 5%);
+	}
+}
+.device{
+	.mdl-card__title{
+		background-color: $grey;
+		color: white;
+	}
+	.mdl-switch.is-checked .mdl-switch__track{
+		background-color: lighten($grey, 35%);
+	}
+	.mdl-switch.is-checked .mdl-switch__thumb{
+		background-color: $grey;
+	}
+	.mdl-switch__ripple-container .mdl-ripple{
+		background-color: lighten($grey, 5%);
 	}
 }

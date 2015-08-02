@@ -38,3 +38,16 @@ h3 {
 
 .temperature .mdl-switch__ripple-container .mdl-ripple {
   background-color: #ffa21a; }
+
+.device .mdl-card__title {
+  background-color: #607d8b;
+  color: white; }
+
+.device .mdl-switch.is-checked .mdl-switch__track {
+  background-color: #c6d2d8; }
+
+.device .mdl-switch.is-checked .mdl-switch__thumb {
+  background-color: #607d8b; }
+
+.device .mdl-switch__ripple-container .mdl-ripple {
+  background-color: #6b8a99; }
