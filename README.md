@@ -1,5 +1,6 @@
-# ESP8266
+# MooHub - Web UI
 
 Custom UI for the ESP8266 module.
 
-All of the resources all loaded **externally** from a CDN.
+### License
+Realeased under the MIT license.
