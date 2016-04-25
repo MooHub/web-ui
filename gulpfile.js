@@ -1,9 +1,8 @@
-var gulp = require('gulp');
-var minifyHTML = require('gulp-minify-html');
-var sass = require('gulp-sass');
-var uglify = require('gulp-uglify');
-
-gulp.task('default', ['minify-html','sass','minify-js']);
+var gulp = require('gulp'),
+    minifyHTML = require('gulp-minify-html'),
+    sass = require('gulp-sass'),
+    connect = require('gulp-connect'),
+    uglify = require('gulp-uglify');
 
 gulp.task('minify-html', function() {
   return gulp.src('./src/index.html')
@@ -23,4 +22,15 @@ gulp.task('minify-js', function() {
     .pipe(gulp.dest(''));
 });
 
+gulp.task('connect', function() {
+  connect.server();
+});
+
+gulp.task('connect:src', function() {
+  connect.server({
+    root: './src',  });
+});
+
 gulp.watch(['./src/index.html','./src/style.scss','./src/app.js'],['default']);
+
+gulp.task('default', ['minify-html','sass','minify-js']);

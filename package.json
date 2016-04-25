@@ -1,16 +1,18 @@
 {
-  "name": "esp8266",
+  "name": "moohub-webui",
   "version": "1.0.0",
-  "description": "Custom UI for the ESP8266 module.",
+  "description": "Custom web UI for the MooHub project, based on the ESP8266 module.",
   "main": " ",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-connect": "^3.2.2",
     "gulp-minify-html": "^1.0.6",
     "gulp-sass": "^2.3.1",
     "gulp-uglify": "^1.5.3"
   },
   "scripts": {
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
